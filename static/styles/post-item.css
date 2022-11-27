@@ -1,0 +1,89 @@
+body {
+    background: #DDECEE;
+}
+
+header {
+    height: 10vh;
+
+}
+
+header > nav {
+    height: 65px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #A5D6D9;
+}
+
+
+footer {
+    height: 6vh;
+    text-align: center;
+    background: #555555;
+    color: white;
+    font-size: 14px;
+}
+
+#main {
+    display: flex;
+    height: 84vh;
+    /*background: white;*/
+    /*padding: 5px;*/
+
+}
+
+article {
+    width: 65%;
+    padding: 35px 40px 10px;
+    /*background: aqua;*/
+    margin-right: 25px;
+    background: white;
+    margin-bottom: 5px;
+}
+
+.header-content {
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.action-option {
+    margin-left: auto;
+    /*order: 800;*/
+    display: inline;
+    position: relative;
+
+}
+
+
+.action-option:hover > ul.dropdown-menu-end {
+    display: block;
+    margin-top: 2px;
+    right: 0;
+
+}
+
+.btn {
+    border: none;
+}
+
+.action-option a:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+
+aside {
+    width: 25%;
+
+    background: white;
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 10px;
+    margin-right: -90px;
+    margin-left: 20px;
+
+    /*background: antiquewhite;*/
+}

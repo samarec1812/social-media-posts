@@ -1,0 +1,52 @@
+.create-content {
+    width: 800px;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 1%;
+    /*margin-bottom: 1%;*/
+}
+
+.header-create {
+    margin: 2%;
+}
+
+.title-container {
+    margin-bottom: 5%;
+}
+
+.text-container {
+    margin-bottom: 5%;
+}
+
+#title-post {
+    height: 44px;
+    font-size: 20px;
+    width: 400px;
+}
+
+#text-post {
+    height: 250px;
+    font-size: 16px;
+}
+
+.title-label {
+    font-size: 32px;
+}
+
+.text-label {
+    font-size: 32px;
+}
+
+.send-button-container > button {
+    font-size: 22px;
+    height: 50px;
+    width: 150px;
+}
+
+.send-button-container {
+    width: 170px;
+    /*margin-right: 25%;*/
+    margin-bottom: 12px;
+}
+
+
