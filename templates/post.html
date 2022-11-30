@@ -19,9 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="/posts/create">Create Post</a>
-            <a class="nav-link active" href="#">Change Post</a>
-            <a class="nav-link active" href="#">Delete Post</a>
-            <a class="nav-link active">About</a>
+            <a class="nav-link active" href="/user">About</a>
           </div>
         </div>
       </div>
@@ -51,7 +49,8 @@
 <!--            <p> anwdpoawjpoajdpo ajapodw apowjd poadp oa</p>-->
         </article>
         <aside>
-            <h4>Боковая панель </h4>
+            <h4 class="header-tags">Best blogs</h4>
+            <hr>
         </aside>
   </div>
 
@@ -80,7 +79,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabelUpdate">Edit post</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  onclick="deleteChange()" aria-label="Close"></button>
       </div>
       <div class="modal-body">
           <form>
@@ -95,7 +94,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="deleteChange()">Close</button>
         <button type="button" class="btn btn-success" onclick="updatePost()">Save</button>
       </div>
     </div>
@@ -162,15 +161,22 @@
           timeHeader.textContent =  response.data.time
           textBody.textContent = response.data.message
 
-          bsAlert.show();
+          bsAlert.show()
 
           setTimeout(function (){
                 location.reload();
-          }, 1500)
+          }, 1000)
+
+        } else {
 
         }
        console.log(response)
     })
+  }
+
+  function deleteChange() {
+      document.getElementById("title-post").value = "{{post.title}}"
+      document.getElementById("text-post").value = "{{post.text}}"
   }
 
 </script>

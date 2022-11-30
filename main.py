@@ -1,28 +1,21 @@
 from flask import Flask, render_template, request, url_for, redirect, make_response, jsonify
-from pymongo import MongoClient
 from bson import ObjectId
 from datetime import datetime
-import json
 from config import DevConfig
+from db import get_db
 
 app = Flask(__name__, template_folder='templates')
 app.config.from_object(DevConfig)
-# mongoURI = "mongodb://{username}:{password}@{host}:{port}/{db}".format(
-#     username="alexey", password="garrix00!",
-#     host="localhost", port=27019,
-#     db="social_media_posts_db"
-# )
-mongoURI = "mongodb://alexey:garrix00!@localhost:27019/"
-# mongoURI = "mongodb://alexey:create123!@{host}:{port}/{db}?authSource=admin".format(
-#     host='localhost',
-#     port='27019',
-#     db='social_media',
-# )
-print(mongoURI)
-# "mongodb://writeApp:writeApp9779@localhost:27017/writeapp?authSource=admin";
-client = MongoClient(mongoURI)
 
-db = client['social_media_posts_db']
+
+db = get_db()
+
+
+@app.route('/user', methods=['GET'])
+def about():
+    return render_template('about.html')
+
+
 client_posts = db['posts']
 
 

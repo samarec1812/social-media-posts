@@ -1,3 +1,14 @@
+header {
+    height: 10vh;
+}
+
+header > nav {
+    height: 65px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #A5D6D9;
+}
+
 .create-content {
     width: 800px;
     position: absolute;
@@ -6,15 +17,23 @@
     /*margin-bottom: 1%;*/
 }
 
+#main {
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+
+}
 .header-create {
     margin: 2%;
 }
 
 .title-container {
-    margin-bottom: 5%;
+    display: block;
+    margin-bottom: 3%;
 }
 
 .text-container {
+    display: block;
     margin-bottom: 5%;
 }
 
@@ -25,7 +44,7 @@
 }
 
 #text-post {
-    height: 250px;
+    height: 240px;
     font-size: 16px;
 }
 
@@ -38,9 +57,11 @@
 }
 
 .send-button-container > button {
-    font-size: 22px;
-    height: 50px;
-    width: 150px;
+    font-size: 18px;
+    background: white;
+    color: black;
+    height: 45px;
+    width: 135px;
 }
 
 .send-button-container {
@@ -50,3 +71,10 @@
 }
 
 
+footer {
+    height: 6vh;
+    text-align: center;
+    background: #555555;
+    color: white;
+    font-size: 14px;
+}
