@@ -12,7 +12,7 @@ services:
       - mongo
     networks:
       - db
-    env_file: .env
+    env_file: .env.devs
 
   mongo:
     container_name: mongo

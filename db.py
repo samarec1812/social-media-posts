@@ -1,9 +1,15 @@
+import os
+
 import yaml
 from dotenv import dotenv_values
 from pymongo import MongoClient
 
+dbConf = {
+    **dotenv_values('.env'),
+    **dotenv_values('.env.devs'),
+    **os.environ,
+}
 
-dbConf = dotenv_values('.env')
 
 def get_db():
     mongoURI = 'mongodb://{username}:{password}@{host}:{port}/'.format(
